@@ -1,0 +1,53 @@
+==================================================
+  DATA STRUCTURES TESTING & VALIDATION
+==================================================
+
+--- 1. Testing Stack (Last-In-First-Out) ---
+Action: Push 10 onto the stack
+Current Stack state: [10]
+Action: Push 20 onto the stack
+Current Stack state: [10, 20]
+Action: Peek (View the top item without removing it)
+Result: 20 (Expected: 20)
+Action: Pop (Remove the top item)
+Result: 20 (Expected: 20)
+Current Stack state after pop: [10]
+Algorithm Demonstration: Balanced Parentheses
+Checking string: '(())'
+Result: True (Expected: True)
+
+--- 2. Testing Queue (First-In-First-Out) ---
+Action: Enqueue 'Task1' into the queue
+Current Queue state (Rear -> Front): ['Task1']
+Action: Enqueue 'Task2' into the queue
+Current Queue state (Rear -> Front): ['Task2', 'Task1']
+Action: View the Front item
+Result: Task1 (Expected: Task1)
+Action: Dequeue (Remove the Front item)
+Result: Task1 (Expected: Task1)
+Current Queue state after dequeue: ['Task2']
+
+Algorithm Demonstration: Hot Potato Simulation
+Players: ['Bill', 'David', 'Susan', 'Jane', 'Kent', 'Brad'], Passes per round: 7
+Winner: Susan (Expected: Susan)
+
+--- 3. Testing Deque (Double-Ended Queue) ---
+Action: Add 'Front1' to the Front
+Current Deque state: ['Front1']
+Action: Add 'Rear1' to the Rear
+Current Deque state: ['Rear1', 'Front1']
+Action: Remove from the Front
+Result: Front1 (Expected: Front1)
+Current Deque state after removal: ['Rear1']
+
+Algorithm Demonstration: Palindrome Checker
+Checking string: 'radar'
+Result: True (Expected: True)
+
+--- 4. Testing LinkedList ---
+Action: Insert elements 5, 10, 15
+Current List state: [5, 10, 15] (Expected: [5, 10, 15])
+Action: Search for the number 10
+Result: True (Expected: True)
+Action: Delete the number 10
+Current List state after deletion: [5, 15] (Expected: [5, 15])
