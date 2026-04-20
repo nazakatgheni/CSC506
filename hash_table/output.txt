@@ -1,0 +1,14 @@
+
+--- Hash Table Performance ---
+Hash Search Time: 0.00021195411682128906
+Linear Search Time: 0.015461921691894531
+
+--- Priority Queue Demo ---
+Peek: 2
+Extract Min: 2
+Extract Min: 5
+
+
+I chose **chaining** as the collision resolution method because it is straightforward to implement and handles collisions in a clean, predictable way. Instead of trying to find another open slot in the table, chaining stores multiple key value pairs in a list at the same index. This makes insertion and deletion operations simpler and less error prone compared to probing methods like linear probing, which require careful handling of empty slots and deleted entries. Chaining also avoids clustering issues that can occur in probing, where consecutive occupied slots slow down performance over time. For this project, clarity and reliability were more important than squeezing out small performance gains, which made chaining the better choice.
+
+The main trade off between chaining and probing comes down to **space versus speed**. Chaining uses extra memory because each index can hold a list of elements, which increases space usage compared to probing, where all data is stored directly in the table. However, chaining tends to maintain more stable performance, especially when the table becomes crowded, because collisions do not force the algorithm to search for the next available slot. In contrast, probing can be more space efficient but may suffer from slower performance due to clustering and longer search sequences as the load factor increases. Overall, chaining offers better consistency and simplicity, while probing may save space but can become less efficient under heavy load.
