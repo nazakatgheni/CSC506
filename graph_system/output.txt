@@ -1,0 +1,103 @@
+
+===== TESTING ADJACENCY LIST =====
+
+Adjacency List Representation:
+A -> ['B', 'C']
+B -> ['A', 'D']
+C -> ['A', 'D']
+D -> ['B', 'C', 'E']
+E -> ['D', 'F']
+F -> ['E']
+
+BFS Traversal (step-by-step):
+
+Queue: ['A']
+Visiting: A
+
+Queue: ['B', 'C']
+Visiting: B
+
+Queue: ['C', 'D']
+Visiting: C
+
+Queue: ['D', 'D']
+Visiting: D
+
+Queue: ['D', 'E']
+
+Queue: ['E']
+Visiting: E
+
+Queue: ['F']
+Visiting: F
+
+DFS Traversal (step-by-step):
+Visiting: A
+Visiting: B
+Visiting: D
+Visiting: C
+Visiting: E
+Visiting: F
+
+Shortest Path (BFS-based):
+Exploring: A, Path so far: ['A']
+Exploring: B, Path so far: ['A', 'B']
+Exploring: C, Path so far: ['A', 'C']
+Exploring: D, Path so far: ['A', 'B', 'D']
+Exploring: D, Path so far: ['A', 'C', 'D']
+Exploring: E, Path so far: ['A', 'B', 'D', 'E']
+Exploring: E, Path so far: ['A', 'C', 'D', 'E']
+Exploring: F, Path so far: ['A', 'B', 'D', 'E', 'F']
+Shortest path found: ['A', 'B', 'D', 'E', 'F']
+
+===== TESTING ADJACENCY MATRIX =====
+
+Adjacency Matrix Representation:
+Vertices: ['A', 'B', 'C', 'D', 'E', 'F']
+[0, 1, 1, 0, 0, 0]
+[1, 0, 0, 1, 0, 0]
+[1, 0, 0, 1, 0, 0]
+[0, 1, 1, 0, 1, 0]
+[0, 0, 0, 1, 0, 1]
+[0, 0, 0, 0, 1, 0]
+
+BFS Traversal (step-by-step):
+
+Queue: ['A']
+Visiting: A
+
+Queue: ['B', 'C']
+Visiting: B
+
+Queue: ['C', 'D']
+Visiting: C
+
+Queue: ['D', 'D']
+Visiting: D
+
+Queue: ['D', 'E']
+
+Queue: ['E']
+Visiting: E
+
+Queue: ['F']
+Visiting: F
+
+DFS Traversal (step-by-step):
+Visiting: A
+Visiting: B
+Visiting: D
+Visiting: C
+Visiting: E
+Visiting: F
+
+Shortest Path (BFS-based):
+Exploring: A, Path so far: ['A']
+Exploring: B, Path so far: ['A', 'B']
+Exploring: C, Path so far: ['A', 'C']
+Exploring: D, Path so far: ['A', 'B', 'D']
+Exploring: D, Path so far: ['A', 'C', 'D']
+Exploring: E, Path so far: ['A', 'B', 'D', 'E']
+Exploring: E, Path so far: ['A', 'C', 'D', 'E']
+Exploring: F, Path so far: ['A', 'B', 'D', 'E', 'F']
+Shortest path found: ['A', 'B', 'D', 'E', 'F']
